@@ -1,3 +1,7 @@
+html {
+  font-size: 16px;
+}
+
 .formData {
   display: flex;
   flex-direction: column;
@@ -12,6 +16,9 @@ button {
   width: 30%;
   margin: auto;
 }
+.table {
+  width: 100%;
+}
 
 .hidden {
   /* visibility: hidden; */
@@ -25,4 +32,10 @@ button {
 
 .links {
   cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 60%;
+  }
 }
