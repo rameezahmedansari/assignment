@@ -1,0 +1,28 @@
+.formData {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formContainer {
+  text-align: center;
+}
+
+button {
+  width: 30%;
+  margin: auto;
+}
+
+.hidden {
+  /* visibility: hidden; */
+  display: none;
+}
+
+.show {
+  /* visibility: visible; */
+  display: 1;
+}
+
+.links {
+  cursor: pointer;
+}
