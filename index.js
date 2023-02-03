@@ -20,12 +20,14 @@ let formArray = [];
 
 let objStr = localStorage.getItem("formArray");
 if (objStr != null) {
-  // if data get from local storage is not null then parse the json file and save it to array
+  // if data get from local storage is not null then parse
+  // the json file and save it to array
   formArray = JSON.parse(objStr);
 }
 
 function showAdd() {
   document.querySelector(".formData").classList.remove("hidden");
+  document.querySelector(".table").classList.add("hidden");
 }
 
 function store() {
