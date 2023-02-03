@@ -9,13 +9,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar bg-primary">
             <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Navbar</span>
+                <span class="navbar-brand mb-0 h1 text-white">Assignment</span>
             </div>
         </nav>
     </header>
@@ -27,16 +28,14 @@
                     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                         id="menu">
                         <li class="nav-item">
-                            <p class="nav-link align-middle px-0 text-white links">
-                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline"
-                                    onclick="showAdd()">Add</span>
+                            <p onclick="showAdd()" class="nav-link align-middle px-0 text-white links">
+                                <i class="fa fa-plus"></i> <span class="ms-1 d-none d-sm-inline">Add</span>
                             </p>
                         </li>
 
                         <li>
-                            <p class="nav-link px-0 align-middle text-white links">
-                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline"
-                                    onclick="view()">View</span>
+                            <p onclick="view()" class="nav-link px-0 align-middle text-white links">
+                                <i class="fa fa-eye"></i> <span class="ms-1 d-none d-sm-inline">View</span>
                             </p>
                         </li>
 
@@ -55,12 +54,7 @@
                     <label for="lname"> Enter your Last Name:
                         <input id="lname" name="lname" type="text" required>
                     </label>
-                    <!-- <label for="gender">
-                            Male:
-                            <input type="radio" name="male" id="">
-                            Female:
-                            <input type="radio" name="female" id="">
-                        </label> -->
+
 
                     <div>
                         <input type="radio" id="male" name="gender" value="Male">
@@ -114,8 +108,10 @@
 
     <footer>
         <nav class="navbar bg-primary">
-            <div class="container-fluid">
-                <span class="navbar-brand mb-0 p">All rights reserved</span>
+            <div class="container-fluid justify-content-center ">
+                <span class="navbar-brand mb-0 p">
+                    <p class="text-white">All rights reserved</p>
+                </span>
             </div>
         </nav>
     </footer>
