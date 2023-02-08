@@ -1,5 +1,3 @@
-const addBtn = document.getElementById("addData");
-
 const fname = document.getElementById("fname");
 const lname = document.getElementById("lname");
 const male = document.getElementById("male");
@@ -7,6 +5,7 @@ const female = document.getElementById("female");
 const dropdown = document.getElementById("dropdown");
 const gender = document.getElementsByName("gender");
 const insuarance = document.getElementsByName("insuarance");
+const addBtn = document.querySelector("#addData");
 
 const tableBody = document.querySelector("tbody");
 
@@ -15,6 +14,44 @@ const LastName = localStorage.getItem("Last Name");
 const Class = localStorage.getItem("Dropdown");
 const Gender = localStorage.getItem("Gender");
 const Insuarance = localStorage.getItem("Insuarance Required");
+
+addBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  var genderVal;
+  var insureVal;
+  for (i = 0; i < gender.length; i++) {
+    if (gender[i].checked) {
+      genderVal = gender[i].value;
+    }
+  }
+
+  for (var i = 0; i < insuarance.length; i++) {
+    if (insuarance[i].checked) {
+      insureVal = insuarance[i].value;
+    }
+  }
+  let id = Math.round(Math.random() * 1000);
+  formArray.push({
+    id: id,
+    fname: fname.value,
+    lname: lname.value,
+    dropdown: dropdown.value,
+    gender: genderVal,
+    insuarance: insureVal,
+  });
+  localStorage.setItem("formArray", JSON.stringify(formArray));
+
+  document.querySelector(".formData").classList.add("hidden");
+  fname.value = "";
+  lname.value = "";
+  dropdown.value = "I";
+
+  var ele = document.getElementsByName("gender");
+  for (var i = 0; i < ele.length; i++) ele[i].checked = false;
+
+  document.getElementById("reqCheck").checked = false;
+  insuarance.insureVal = "";
+});
 
 let formArray = [];
 
@@ -38,6 +75,7 @@ function store() {
       genderVal = gender[i].value;
     }
   }
+
   for (var i = 0; i < insuarance.length; i++) {
     if (insuarance[i].checked) {
       insureVal = insuarance[i].value;
